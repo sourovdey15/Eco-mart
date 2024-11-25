@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Mart</title>
+    <!-- Link Daisy And Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Link Font Awesome  -->
+    <script src="https://kit.fontawesome.com/ea12aba3f5.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts Poppins and EB Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'clifford': '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom Fonts Style -->
+    <style>
+        .font-poppins {
+            font-family: "Poppins", serif;
+        }
+
+        .font-ebgaramond {
+            font-family: "EB Garamond", serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="">
+        <!-- First Top Notify Area -->
+        <div class="bg-slate-100">
+            <div class="notify-area container w-5/6 mx-auto  hidden lg:flex  justify-between py-3">
+                <div>
+                    <p class="font-poppins text-xs font-bold text-green-600">Fee Shipping on All Orders Over $99</p>
+                </div>
+                <div class="mx-auto md:mx-0 mt-3 md:mt-0 ">
+                    <ul class="flex gap-4 font-pippins font-semibold text-xs ">
+                        <li class="hover:text-green-600"><a href="">Become a Vendor</a></li>
+                        <li class="hover:text-green-600"> <a href="">Order Tracking</a></li>
+                        <li class="hover:text-green-600"><a href="">My Wishlist</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second top  Area Search and Cart  -->
+        <div class="container w-5/6 mx-auto mt-5 flex  items-center justify-between ">
+            <!-- Drop Down Menu Area -->
+            <div class="flex">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-20	 mt-3 w-52 p-2 shadow font-poppins ">
+                        <li class="hover:text-green-600"><a>Home</a></li>
+                        <li class="hover:text-green-600"><a>Blog</a></li>
+                        <li class="hover:text-green-600"><a>Flash Sales</a></li>
+                    </ul>
+                </div>
+                <div class="">
+                    <a class="btn btn-ghost text-xl md:text-2xl font-ebgaramond font-extrabold  ">Eco <span
+                            class="text-green-600"> Mart</span></a>
+                </div>
+            </div>
+            <!-- Header Search Bar Area -->
+            <div class=" hidden lg:flex">
+                <div class="join">
+                    <select class="select select-bordered join-item">
+                        <option disabled selected>All Items</option>
+                        <option>Vegetables</option>
+                        <option>Flash Sales</option>
+                        <option>Blog</option>
+                    </select>
+                    <div>
+                        <div>
+                            <input class="input input-bordered join-item" placeholder="Search" />
+                        </div>
+                    </div>
+                    <div class="indicator">
+                        <!-- <span class="indicator-item badge badge-black-400">new</span> -->
+                        <button class="btn join-item"><i class="fa-solid fa-magnifying-glass text-xl "></i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Profile and Cart Area -->
+            <div class="flex  ">
+                <button class="btn btn-ghost btn-circle text-xl flex lg:hidden">
+                    <i class="fa-solid fa-magnifying-glass text-green-600 "></i>
+                </button>
+                <button class="btn btn-ghost btn-circle text-xl">
+                    <i class="fa-solid fa-user text-green-600"></i>
+                </button>
+                <button class="btn btn-ghost btn-circle text-xl">
+                    <div class="indicator">
+                        <i class="fa-solid fa-cart-shopping text-green-600"></i>
+                        <span class="badge badge-xs badge-warning   indicator-item"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <!-- Third Top Area Main Menu -->
+        <!-- Main Menu For Large Screen -->
+        <div class=" container w-5/6 mx-auto hidden xl:flex font-ebgaramond font-bold">
+            <div class="navbar bg-base-100 mt-5">
+                <div class="navbar-start hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-xl z-10	">
+                        <li><a class="text-green-600">Home</a></li>
+                        <li>
+                            <details>
+                                <summary class="hover:text-green-600">Shop</summary>
+                                <ul class="p-2 z-10	">
+                                    <li class="hover:text-green-600"><a>Shop 1</a></li>
+                                    <li class="hover:text-green-600"><a>Shop 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary class="hover:text-green-600">Vegetables</summary>
+                                <ul class="p-2">
+                                    <li class="hover:text-green-600"><a>Vegetables 1</a></li>
+                                    <li class="hover:text-green-600"><a>Vegetables 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary class="hover:text-green-600">Blog</summary>
+                                <ul class="p-2">
+                                    <li class="hover:text-green-600"><a>Blog 1</a></li>
+                                    <li class="hover:text-green-600"><a>Blog 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li class="hover:text-green-600"><a>Flash Sales</a></li>
+                    </ul>
+                </div>
+                <!-- Recent View Area -->
+                <div class="navbar-end">
+                    <ul class="menu menu-horizontal px-1 text-xl z-10	">
+                        <li>
+                            <details>
+                                <summary class="hover:text-green-600">Recent View</summary>
+                                <ul class="p-2">
+                                    <li class="hover:text-green-600"><a>Recent 1</a></li>
+                                    <li class="hover:text-green-600"> <a>Recent 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Banner Area -->
+    <section class="banner container mx-auto w-full mt-8">
+        <!-- Slider Area -->
+        <div class="carousel w-full h-[400px]">
+            <!-- Slider 1 -->
+            <div id="slide1" class="carousel-item relative w-full ">
+                <div class="hero h-[400px] rounded-xl bg-white " style="background-image: url(images/banner1.jpg);">
+                    <div class="hero-overlay "></div>
+                    <div class="hero-content text-neutral-content text-center">
+                        <div class="max-w-md my-5">
+                            <h4 class="mb-1 text-4xl font-bold">Farm Fresh Vegetables & <br> Food 100% Organic</h4>
+                            <p class=" text-xs ">
+                                Always Fresh and Organic Product For you
+                            </p>
+                            <button
+                                class="btn bg-amber-500 border-0 text-white hover:text-amber-500 hover:bg-white mt-2">Shop
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide3" class="btn btn-circle opacity-35">❮</a>
+                    <a href="#slide2" class="btn btn-circle opacity-35">❯</a>
+                </div>
+            </div>
+            <!-- Slider 2-->
+            <div id="slide2" class="carousel-item relative w-full">
+                <div class="hero h-[400px] rounded-xl bg-white " style="background-image: url(images/banner3.jpg);">
+                    <div class="hero-overlay "></div>
+                    <div class="hero-content text-neutral-content text-center">
+                        <div class="max-w-md my-5">
+                            <h4 class="mb-1 text-4xl font-bold">Farm Fresh Vegetables & <br> Food 100% Organic</h4>
+                            <p class=" text-xs ">
+                                Always Fresh and Organic Product For you
+                            </p>
+                            <button
+                                class="btn bg-amber-500 border-0 text-white hover:text-amber-500 hover:bg-white mt-2">Shop
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide1" class="btn btn-circle opacity-35">❮</a>
+                    <a href="#slide3" class="btn btn-circle opacity-35">❯</a>
+                </div>
+            </div>
+            <!-- Slider 3 -->
+            <div id="slide3" class="carousel-item relative w-full">
+                <div class="hero h-[400px] rounded-xl bg-white " style="background-image: url(images/banner4.jpg);">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content text-neutral-content text-center">
+                        <div class="max-w-md my-5">
+                            <h4 class="mb-1 text-4xl font-bold">Farm Fresh Vegetables & <br> Food 100% Organic</h4>
+                            <p class=" text-xs ">
+                                Always Fresh and Organic Product For you
+                            </p>
+                            <button
+                                class="btn bg-amber-500 border-0 text-white hover:text-amber-500 hover:bg-white mt-2">Shop
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide2" class="btn btn-circle opacity-35">❮</a>
+                    <a href="#slide1" class="btn btn-circle opacity-35">❯</a>
+                </div>
+            </div>
+        </div>
+        <!-- Black Friday Offer Area -->
+        <div>
+            <h2 class="font-ebgaramond text-xl md:text-2xl font-extrabold text-center my-2">Get Extra 5% Discount Use
+                this <span class="text-green-600">#BlackFriday </span> </h2>
+        </div>
+    </section>
+    <!-- Short About US Area -->
+    <section class="about-us container mx-auto w-4/5 mt-8">
+        <!-- Card Area -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 ">
+            <!-- Card 1 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <i class="fa-solid fa-ranking-star text-2xl"></i>
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title font-ebgaramond font-extrabold">Top Rank Farms !</h2>
+                    <p class="font-poppins text-xs">Ut facilisis luctus elit id ornare. Aenean non sem risus.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <i class="fa-solid fa-certificate text-2xl"></i>
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title font-ebgaramond font-extrabold">Organic Certificated !</h2>
+                    <p class="font-poppins text-xs">Ut facilisis luctus elit id ornare. Aenean non sem risus.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <i class="fa-solid fa-truck-fast text-2xl"></i>
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title font-ebgaramond font-extrabold">Fast Delivery !</h2>
+                    <p class="font-poppins text-xs">Ut facilisis luctus elit id ornare. Aenean non sem risus.</p>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <i class="fa-solid fa-check-double text-2xl"></i>
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title font-ebgaramond font-extrabold">TTrusted Products !</h2>
+                    <p class="font-poppins text-xs">Ut facilisis luctus elit id ornare. Aenean non sem risus.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Demo Card Area -->
+        <div class=" my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 ">
+            <div><img class="w-[100%]" src="images/democard1.jpg" alt="democard1"></div>
+            <div><img class="w-[100%]" src="images/democard2.jpg" alt="democard2"></div>
+            <div><img class="w-[100%]" src="images/democard3.jpg" alt="democard3"></div>
+            <div><img class="w-[100%]" src="images/democard1.jpg" alt="democard1"></div>
+        </div>
+    </section>
+    <!-- Main Product Area -->
+    <section class="main container mx-auto w-4/5 my-8">
+        <div class="title mb-5">
+            <h2 class="text-xl md:text-2xl font-ebgaramond font-extrabold">Daily Chilled Vegetables </h2>
+        </div>
+    </section>
+    <!-- Product Carousel Area -->
+    <section class="product-slider md:container w-full md:w-[95%] mx-auto">
+        <div class="carousel ">
+            <!-- Slider 1 -->
+            <div id="slide10" class="carousel-item relative w-full">
+                <!-- Card Area Start -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-auto">
+                    <!-- Product 1 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(1).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Drinks</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Milk and Drinks</h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(2).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Vegetables</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Fresh Vegetables</h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(3).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Fruit</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Organic Fruits </h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(4).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Eggs</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Dairy & Eggs</h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Area End -->
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide40" class="btn btn-circle">❮</a>
+                    <a href="#slide20" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- Slider 2 -->
+            <div id="slide20" class="carousel-item relative w-full">
+                <!-- Card Area Start -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-auto">
+                    <!-- Product 1 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(2).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Vegetables</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Fresh Vegetables</h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(1).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Drinks</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Milk and Drinks</h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(4).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Eggs</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Dairy & Eggs</h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(3).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Fruit</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Organic Fruits </h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Area End -->
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide10" class="btn btn-circle">❮</a>
+                    <a href="#slide30" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- Slider 3 -->
+            <div id="slide30" class="carousel-item relative w-full">
+                <!-- Card Area Start -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-auto">
+                    <!-- Product 1 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(1).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Drinks</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Milk and Drinks</h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(2).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Vegetables</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Fresh Vegetables</h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(3).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Fruit</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Organic Fruits </h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(4).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Eggs</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Dairy & Eggs</h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Area End -->
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide20" class="btn btn-circle">❮</a>
+                    <a href="#slide40" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- Slider 4 -->
+            <div id="slide40" class="carousel-item relative w-full">
+                <!-- Card Area Start -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-auto">
+                    <!-- Product 1 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(2).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Vegetables</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Fresh Vegetables</h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(1).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Drinks</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Milk and Drinks</h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(4).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Eggs</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Dairy & Eggs</h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="card bg-base-100 shadow-xl ">
+                        <figure class="px-10 pt-10">
+                            <img src="images/p-cart/cart(3).jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body  ">
+                            <div class="badge badge-outline font-poppins">Fruit</div>
+                            <h2 class="card-title font-ebgaramond font-bold">Organic Fruits </h2>
+                            <p class="font-poppins">350g</p>
+                            <!-- rating  -->
+                            <div class="flex items-center gap-3">
+                                <div class="rating rating-sm">
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                        checked="checked" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <div>
+                                    <h2> 3.0 </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                    To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Area End -->
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide30" class="btn btn-circle">❮</a>
+                    <a href="#slide10" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shop with Category -->
+    <section class="main container mx-auto w-4/5 my-8">
+        <div class="title mb-5">
+            <h2 class="text-xl md:text-2xl font-ebgaramond font-extrabold">Shop By Category </h2>
+        </div>
+        <!-- Products Category -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
+            <!-- Category 1 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="images/p-cart/cart(1).jpg" alt="cart1">
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title font-ebgaramond font-bold">Milk</h2>
+                </div>
+            </div>
+            <!-- Category 2 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="images/p-cart/cart(2).jpg" alt="cart1">
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title font-ebgaramond font-bold">Vegetables</h2>
+                </div>
+            </div>
+            <!-- Category 3 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="images/p-cart/cart(3).jpg" alt="cart1">
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title font-ebgaramond font-bold">Fruit</h2>
+                </div>
+            </div>
+            <!-- Category 4 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="images/p-cart/cart(1).jpg" alt="cart1">
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title font-ebgaramond font-bold">Milk </h2>
+                </div>
+            </div>
+            <!-- Category 5-->
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="images/p-cart/cart(2).jpg" alt="cart1">
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title font-ebgaramond font-bold">Vegetables</h2>
+                </div>
+            </div>
+            <!-- Category 6 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="images/p-cart/cart(3).jpg" alt="cart1">
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title font-ebgaramond font-bold   ">Fruits</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Custom Ads Area -->
+    <section class="custom-ads container w-4/5  mx-auto gap-4">
+        <div class="flex flex-col md:flex-row justify-center ">
+            <div class="mb-4 ">
+                <img class="w-11/12 mx-auto" src="images/long-banner-01 .jpg" alt="">
+            </div>
+            <div class="mb-4">
+                <img class="w-11/12 mx-auto" src="images/long-banner-02 .jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Blog Area -->
+    <section class="blog container w-4/5 mx-auto flex flex-col md:flex-row justify-center items-center mt-8">
+        <div class="flex-1">
+            <img src="images/p-cart/Fruit.jpg" alt="Fruit ">
+        </div>
+        <div class="flex-1 ">
+            <div class="mb-4">
+                <h3 class="font-extrabold font-ebgaramond  text-2xl lg:text-4xl mb-2">Organic Vegetables Everyday</h3>
+                <h4 class="font-bold font-ebgaramond mb-2">Your online resource of healthy recipes.</h4>
+                <p class="font-poppins text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                    vulputate ultrices libero ut vehicula. In sit amet arcu libero. Proin fringilla dui sed arcu
+                    fringilla tristique eget ultricies elit
+                </p>
+            </div>
+            <div>
+                <button
+                    class="btn bg-green-600 text-white hover:bg-white hover:text-green-600 hover:border-green-600">Read
+                    More</button>
+            </div>
+        </div>
+    </section>
+    <!-- Recommendation Area -->
+    <section class="Recommended container w-4/5 mx-auto my-10">
+        <div class="title-area mb-8">
+            <h2 class="font-ebgaramond font-extrabold text-xl md:text-2xl">Recommended For You</h2>
+        </div>
+        <div>
+            <div class="grid  md:grid-cols-2 lg:grid-cols-4 gap-2 mx-auto">
+                <!-- Product 1 -->
+                <div class="card bg-base-100 shadow-xl  ">
+                    <figure class="px-10 pt-10">
+                        <img src="images/p-cart/cart(1).jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body  ">
+                        <div class="badge badge-outline font-poppins">Drinks</div>
+                        <h2 class="card-title font-ebgaramond font-bold">Milk and Drinks</h2>
+                        <p class="font-poppins">350g</p>
+                        <!-- rating  -->
+                        <div class="flex items-center gap-3">
+                            <div class="rating rating-sm">
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                    checked="checked" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <div>
+                                <h2> 3.0 </h2>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                        </div>
+                        <div class="card-actions">
+                            <button
+                                class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="card bg-base-100 shadow-xl ">
+                    <figure class="px-10 pt-10">
+                        <img src="images/p-cart/cart(2).jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body  ">
+                        <div class="badge badge-outline font-poppins">Vegetables</div>
+                        <h2 class="card-title font-ebgaramond font-bold">Fresh Vegetables</h2>
+                        <p class="font-poppins">350g</p>
+                        <!-- rating  -->
+                        <div class="flex items-center gap-3">
+                            <div class="rating rating-sm">
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                    checked="checked" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <div>
+                                <h2> 3.0 </h2>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                        </div>
+                        <div class="card-actions">
+                            <button
+                                class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="card bg-base-100 shadow-xl ">
+                    <figure class="px-10 pt-10">
+                        <img src="images/p-cart/cart(3).jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body  ">
+                        <div class="badge badge-outline font-poppins">Fruit</div>
+                        <h2 class="card-title font-ebgaramond font-bold">Organic Fruits </h2>
+                        <p class="font-poppins">350g</p>
+                        <!-- rating  -->
+                        <div class="flex items-center gap-3">
+                            <div class="rating rating-sm">
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                    checked="checked" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <div>
+                                <h2> 3.0 </h2>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                        </div>
+                        <div class="card-actions">
+                            <button
+                                class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="card bg-base-100 shadow-xl ">
+                    <figure class="px-10 pt-10">
+                        <img src="images/p-cart/cart(4).jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body  ">
+                        <div class="badge badge-outline font-poppins">Eggs</div>
+                        <h2 class="card-title font-ebgaramond font-bold">Dairy & Eggs</h2>
+                        <p class="font-poppins">350g</p>
+                        <!-- rating  -->
+                        <div class="flex items-center gap-3">
+                            <div class="rating rating-sm">
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"
+                                    checked="checked" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <div>
+                                <h2> 3.0 </h2>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="font-ebgaramond font-bold text-red-500">$99</h2>
+                        </div>
+                        <div class="card-actions">
+                            <button
+                                class="btn bg-green-600 w-full text-white hover:bg-white hover:text-green-600 hover:border-green-600">Add
+                                To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Top Text Area -->
+    <section class="footer-text-area bg-slate-100">
+        <div class="container w-4/5 mx-auto py-4">
+            <p>GreenMart makes online grocery delivery and grocery shopping fast and easy. Get groceries delivered and
+                order the best of seasonal farm fresh food, great local finds, quick meal solutions, incredible new
+                products and exclusives, and all of your favorite grocery brands. It’s supermarket delivery with so much
+                more: from Fresh Deals that help you save big to convenient delivery windows that work around your
+                schedule, we’ve thought of everything to make grocery home delivery simple for you. We’re a grocery
+                delivery service you can trust as we source only the highest-quality products and deliver them directly
+                to your door.
+            </p>
+        </div>
+        <!-- Information About Store Area -->
+        <div class=" container w-4/5 mx-auto py-6">
+            <div class="flex flex-col lg:flex-row gap-2 justify-center ">
+                <div class="flex items-center gap-4 bg-white px-5 py-5 rounded-sm flex-1">
+                    <div>
+                        <i class="fa-solid fa-house-user text-4xl text-green-600"></i>
+                    </div>
+                    <div>
+                        <p class="font-poppins text-sm">Home Online Shopping </p>
+                        <h3 class="font-ebgaramond font-extrabold text-xl">+78 925-942-2900 </h3>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 bg-white px-5 py-5 rounded-sm flex-1">
+                    <div>
+                        <i class="fa-solid fa-phone-volume text-4xl  text-green-600"></i>
+                    </div>
+                    <div>
+                        <p class="font-poppins text-sm">Support Center </p>
+                        <h3 class="font-ebgaramond font-extrabold text-xl">+78 925-942-2900 </h3>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 bg-white px-5 py-5 rounded-sm flex-1">
+                    <div>
+                        <i class="fa-solid fa-store text-4xl  text-green-600"></i>
+                    </div>
+                    <div>
+                        <p class="font-poppins text-sm">Store Locations </p>
+                        <h3 class="font-ebgaramond font-extrabold text-xl"><a href=" ">View All 5 Store  </a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Main Footer Area -->
+     <footer class="bg-slate-400">
+        <div class="container w-4/5 mx-auto flex flex-col md:flex-row justify-between items-center py-4">
+            <div class=" mb-3 md:mb-0">
+                <h3 class="font-ebgaramond font-bold"> <a href="">&copy; Eco <span class="text-green-600"> Mart</span>   </a>|| All Rights Reserved</h3>
+            </div>
+            <div>
+                <ul class="text-white flex gap-3 text-2xl">
+                    <li class="hover:text-green-600"><a href=""><i class="fa-brands fa-cc-mastercard"></i></a></li>
+                    <li class="hover:text-green-600"><a href=""><i class="fa-brands fa-cc-visa"></i></a></li>
+                    <li class="hover:text-green-600"><a href=""><i class="fa-brands fa-cc-paypal"></i></a></li>
+                    <li class="hover:text-green-600"><a href=""><i class="fa-solid fa-credit-card"></i></a></li>
+                </ul>
+            </div>
+        </div>
+     </footer>
+</body>
+</html>
